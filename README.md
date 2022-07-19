@@ -13,7 +13,11 @@ HTML, CSS, bootstrap5 <br>
 ## Data Validation
 
 Client side - booststrap & js Error <br>
-Server side - JOI library
+Server side - JOI library<br>
+
+## Data relationship
+
+One campground has many reviews - review stored as an array in campground attribute: reviews <br> - Deleting one campground will also delete all reviews
 
 ## Seeds Folder
 
