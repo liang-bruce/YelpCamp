@@ -6,9 +6,10 @@ Following RESTful API pattern
 
 ## Stacks, Libraries & Frameworks
 
-Node.js, express, ejs, ejs-mate <br>
+Javascript, Node.js, express, ejs, ejs-mate <br>
 MongoDB, Mongoose <br>
 HTML, CSS, bootstrap5 <br>
+express-session, connect-flash<br>
 
 ## Data Validation
 
