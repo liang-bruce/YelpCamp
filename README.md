@@ -10,6 +10,7 @@ Javascript, Node.js, express, ejs, ejs-mate <br>
 MongoDB, Mongoose <br>
 HTML, CSS, bootstrap5 <br>
 express-session, connect-flash<br>
+passport
 
 ## Data Validation
 
