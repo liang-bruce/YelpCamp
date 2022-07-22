@@ -10,7 +10,9 @@ Javascript, Node.js, express, ejs, ejs-mate <br>
 MongoDB, Mongoose <br>
 HTML, CSS, bootstrap5 <br>
 express-session, connect-flash<br>
-passport
+passport <br>
+RESTful routes, MVC(model, view, controller) pattern <br>
+Starability
 
 ## Data Validation
 
