@@ -6,13 +6,16 @@ Following RESTful API pattern
 
 ## Stacks, Libraries & Frameworks
 
-Javascript, Node.js, express, ejs, ejs-mate <br>
-MongoDB, Mongoose <br>
-HTML, CSS, bootstrap5 <br>
+Database: MongoDB, Mongoose <br>
+Backend: Javascript, Node.js, express, ejs, ejs-mate, RESTful routes, MVC(model, view, controller) pattern <br>
+Frontend: HTML, CSS, bootstrap5 <br>
+
+Library & middleware:
 express-session, connect-flash<br>
-passport <br>
-RESTful routes, MVC(model, view, controller) pattern <br>
-Starability
+passport - authentication<br>
+starability - star review<br>
+multer, cloudinary, multer storage cloudinary - upload file (image)<br>
+dotenv - environment variables
 
 ## Data Validation
 

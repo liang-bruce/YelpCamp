@@ -1,20 +1,31 @@
 const Campground = require("../models/campground");
+const { cloudinary } = require("../cloudinary");
 
+// @ts-ignore
 module.exports.index = async (req, res) => {
   const campgrounds = await Campground.find({});
   res.render("campgrounds/index", { campgrounds });
 };
 
+// @ts-ignore
 module.exports.renderNewForm = (req, res) => {
   res.render("campgrounds/new");
 };
 
+// @ts-ignore
 module.exports.createCampground = async (req, res, next) => {
   const campground = new Campground(req.body.campground);
+  // add images properties to campground
+  // @ts-ignore
+  campground.images = req.files.map((f) => ({
+    url: f.path,
+    filename: f.filename,
+  }));
   // req.user is added through passport middleware
   // @ts-ignore
   campground.author = req.user._id;
   await campground.save();
+  console.log(campground);
   req.flash("success", "Successfully made a new campground!");
   res.redirect(`/campgrounds/${campground._id}`);
 };
@@ -52,9 +63,28 @@ module.exports.renderEditForm = async (req, res) => {
 
 module.exports.updateCampground = async (req, res) => {
   const id = req.params.id;
+  console.log(req.body);
   const campground = await Campground.findByIdAndUpdate(id, {
     ...req.body.campground,
   });
+  const imgs = req.files.map((f) => ({
+    url: f.path,
+    filename: f.filename,
+  }));
+  // @ts-ignore
+  campground.images.push(...imgs);
+  // @ts-ignore
+  await campground.save();
+  if (req.body.deleteImages) {
+    for (let filename of req.body.deleteImages) {
+      await cloudinary.uploader.destroy(filename);
+    }
+    // @ts-ignore
+    await campground.updateOne({
+      $pull: { images: { filename: { $in: req.body.deleteImages } } },
+    });
+    console.log(campground);
+  }
   req.flash("success", "Successfully updated campground");
   // @ts-ignore
   res.redirect(`/campgrounds/${campground._id}`);

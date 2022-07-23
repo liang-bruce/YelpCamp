@@ -2,9 +2,21 @@ const mongoose = require("mongoose");
 const Review = require("./review");
 const Schema = mongoose.Schema;
 
+//Schemas can be nested
+const ImageSchema = new Schema({
+  url: String,
+  filename: String,
+});
+
+//virtual property is not stored in Mongo, do this calc when queried
+ImageSchema.virtual("thumbnail").get(function () {
+  // @ts-ignore
+  return this.url.replace("/upload", "/upload/w_200");
+});
+
 const CampgroundSchema = new Schema({
   title: String,
-  image: String,
+  images: [ImageSchema],
   price: Number,
   description: String,
   location: String,
