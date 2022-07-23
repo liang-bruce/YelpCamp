@@ -1,4 +1,6 @@
 <% layout('layouts/boilerplate') %>
+<!-- if there are a lot of libraries/ css files, it is good to separate the links to each page -->
+<!-- not putting it in the one boilerplate, or make separate boilerplates  -->
 <link rel="stylesheet" href="/stylesheets/stars.css" />
 
 <div class="row">
@@ -45,19 +47,9 @@
       onsubmit="return validate_form()"
       novalidate
     >
-      <!-- <div class="mb-3">
-        <label class="form-label" for="rating">Rating</label>
-        <input
-          class="form-range"
-          type="range"
-          min="1"
-          max="5"
-          name="review[rating]"
-          id="rating"
-        />
-      </div> -->
+      <!-- Default rating is 3 -->
       <div class="mb-1">
-        <fieldset class="starability-basic">
+        <fieldset class="starability-coinFlip">
           <!-- <input
             type="radio"
             id="no-rate"
