@@ -22,9 +22,13 @@ dotenv - environment variables
 Client side - booststrap & js Error <br>
 Server side - JOI library<br>
 
-## Data relationship
+## Data notes
 
-One campground has many reviews - review stored as an array in campground attribute: reviews <br> - Deleting one campground will also delete all reviews
+One campground has many reviews - review stored as an array in campground attribute: reviews <br>
+
+- Deleting one campground will also delete all reviews <br>
+  <br>
+  Mongoose virtual property used for Image thumbnail
 
 ## Seeds Folder
 
