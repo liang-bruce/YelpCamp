@@ -28,7 +28,7 @@ One campground has many reviews - review stored as an array in campground attrib
 
 - Deleting one campground will also delete all reviews <br>
   <br>
-  Mongoose virtual property used for Image thumbnail
+  Mongoose virtual property used for Image thumbnail & cluster map popup text
 
 ## Seeds Folder
 
