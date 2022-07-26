@@ -1,5 +1,7 @@
 # Yelp Camp Project
 
+Avaliable on https://yelpcamp-jitian.herokuapp.com/
+
 ## Learned from The Web Developer Bootcamp 2022 - Udemy
 
 Following RESTful API pattern
@@ -32,7 +34,8 @@ One campground has many reviews - review stored as an array in campground attrib
 
 - Deleting one campground will also delete all reviews <br>
   <br>
-  Mongoose virtual property used for Image thumbnail & cluster map popup text
+
+Mongoose virtual property used for Image thumbnail & cluster map popup text
 
 ## Seeds Folder
 
