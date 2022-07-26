@@ -9,13 +9,17 @@ Following RESTful API pattern
 Database: MongoDB, Mongoose <br>
 Backend: Javascript, Node.js, express, ejs, ejs-mate, RESTful routes, MVC(model, view, controller) pattern <br>
 Frontend: HTML, CSS, bootstrap5 <br>
+Deploy: Heroku <br>
 
 Library & middleware:
 express-session, connect-flash<br>
 passport - authentication<br>
 starability - star review<br>
 multer, cloudinary, multer storage cloudinary - upload file (image)<br>
-dotenv - environment variables
+dotenv - environment variables<br>
+express-mongo-sanitize - prevent Mongo injection<br>
+sanitize-html - disable html components insertion<br>
+connect-mongo - store session in mongo not in memory<br>
 
 ## Data Validation
 
