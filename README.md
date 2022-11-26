@@ -1,6 +1,6 @@
 # Yelp Camp Project
 
-Avaliable on https://yelpcamp-jitian.herokuapp.com/
+Avaliable on https://yelpcampbybruce.onrender.com
 
 ## Learned from The Web Developer Bootcamp 2022 - Udemy
 
