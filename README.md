@@ -11,7 +11,7 @@ Following RESTful API pattern
 Database: MongoDB, Mongoose <br>
 Backend: Javascript, Node.js, express, ejs, ejs-mate, RESTful routes, MVC(model, view, controller) pattern <br>
 Frontend: HTML, CSS, bootstrap5 <br>
-Deploy: Heroku <br>
+Deploy: Render <br>
 
 Library & middleware:
 express-session, connect-flash<br>
